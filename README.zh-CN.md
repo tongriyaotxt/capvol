@@ -169,6 +169,16 @@ Learning curve: vol(F) ~ x^alpha, true alpha = 0.30
 python -m pytest tests -q
 ```
 
+
+### 图
+
+| | |
+|---|---|
+| ![capability vs cost budget](figures/capability_vs_threshold.png) | ![learning curve](figures/learning_curve.png) |
+| `vol(F)` 随代价预算 `V_max` 的变化。左端很平意味着"要么够到一点，要么什么也够不到"。 | `vol(F)` 随训练投入的变化，附拟合指数。 |
+| ![feasible projection](figures/feasible_projection.png) | |
+| demo 里两个可行集投影到同一组二维基上。同一坐标轴、同一预算：一个椭球 vs 64 个小孤岛。 | |
+
 ---
 
 ## 怎么读这些数字

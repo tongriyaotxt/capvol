@@ -169,6 +169,16 @@ Test suite: **19 tests, 4.2 s**, every estimator checked against a closed-form a
 python -m pytest tests -q
 ```
 
+
+### Figures
+
+| | |
+|---|---|
+| ![capability vs cost budget](figures/capability_vs_threshold.png) | ![learning curve](figures/learning_curve.png) |
+| `vol(F)` against the cost budget `V_max`. A flat left edge means "reach a little or reach nothing". | `vol(F)` against training investment, with the fitted exponent. |
+| ![feasible projection](figures/feasible_projection.png) | |
+| The two feasible sets from the demo, projected onto one shared 2-D basis. Same axes, same budget: one ellipsoid versus 64 small islands. | |
+
 ---
 
 ## Reading the numbers
