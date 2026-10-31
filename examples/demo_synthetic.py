@@ -221,13 +221,17 @@ def main() -> int:
         pts, _ = sample_feasible(space, V, v_max=1.0, n=100_000, rng=rng)
         sets[name] = pts
 
-    plot_capability_vs_threshold(
-        thresholds, curves["ours"],
-        fig_dir / "capability_vs_threshold.png",
-        title="ours: capability vs cost budget",
-    )
-    plot_learning_curve(curve, fig_dir / "learning_curve.png", xlabel="training investment x")
-    plot_feasible_projection(sets, fig_dir / "feasible_projection.png")
+    try:
+        plot_capability_vs_threshold(
+            thresholds, curves["ours"],
+            fig_dir / "capability_vs_threshold.png",
+            title="ours: capability vs cost budget",
+        )
+        plot_learning_curve(curve, fig_dir / "learning_curve.png",
+                            xlabel="training investment x")
+        plot_feasible_projection(sets, fig_dir / "feasible_projection.png")
+    except ImportError:
+        print("  (matplotlib not installed: skipping figures — pip install '.[plot]')")
 
     print()
     print(f"  report : {out_dir / 'demo_report.md'}")
