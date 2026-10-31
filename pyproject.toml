@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capvol"
+version = "0.1.0"
+description = "Measure the feasible volume of a goal-conditioned policy: capability as a number with a confidence interval."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "YG" }]
+keywords = ["robotics", "goal-conditioned", "evaluation", "reachability", "subset-simulation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.6"]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/tongriyaotxt/capvol"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
